@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2BCEF4DF-F910-416D-9F3E-788566F249E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constant.cs" />
+    <Compile Include="FormMuonSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMuonSach.Designer.cs">
+      <DependentUpon>FormMuonSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLyMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLyMuonTra.Designer.cs">
+      <DependentUpon>FormQuanLyMuonTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCao.Designer.cs">
+      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaoCaoSachTraTre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCaoSachTraTre.Designer.cs">
+      <DependentUpon>FormBaoCaoSachTraTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaoCaoTheoTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaoCaoTheoTheLoai.Designer.cs">
+      <DependentUpon>FormBaoCaoTheoTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChiTietPhieuTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChiTietPhieuTra.Designer.cs">
+      <DependentUpon>FormChiTietPhieuTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChiTietPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChiTietPhieuMuon.Designer.cs">
+      <DependentUpon>FormChiTietPhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDanhSachPhieuTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhSachPhieuTra.Designer.cs">
+      <DependentUpon>FormDanhSachPhieuTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDanhSachPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhSachPhieuMuon.Designer.cs">
+      <DependentUpon>FormDanhSachPhieuMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTimDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTimDocGia.Designer.cs">
+      <DependentUpon>FormTimDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTraCuuDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTraCuuDocGia.Designer.cs">
+      <DependentUpon>FormTraCuuDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTimSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTimSach.Designer.cs">
+      <DependentUpon>FormTimSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTraCuuSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTraCuuSach.Designer.cs">
+      <DependentUpon>FormTraCuuSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTraSach.Designer.cs">
+      <DependentUpon>FormTraSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSach.Designer.cs">
+      <DependentUpon>FormSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThuTienPhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThuTienPhat.Designer.cs">
+      <DependentUpon>FormThuTienPhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuyDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuyDinh.Designer.cs">
+      <DependentUpon>FormQuyDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTacGia.Designer.cs">
+      <DependentUpon>FormTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTheLoai.Designer.cs">
+      <DependentUpon>FormTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoaiDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoaiDocGia.Designer.cs">
+      <DependentUpon>FormLoaiDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrangChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrangChinh.Designer.cs">
+      <DependentUpon>FormTrangChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDocGia.Designer.cs">
+      <DependentUpon>FormDocGia.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormMuonSach.resx">
+      <DependentUpon>FormMuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLyMuonTra.resx">
+      <DependentUpon>FormQuanLyMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaoCao.resx">
+      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaoCaoSachTraTre.resx">
+      <DependentUpon>FormBaoCaoSachTraTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaoCaoTheoTheLoai.resx">
+      <DependentUpon>FormBaoCaoTheoTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChiTietPhieuTra.resx">
+      <DependentUpon>FormChiTietPhieuTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChiTietPhieuMuon.resx">
+      <DependentUpon>FormChiTietPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhSachPhieuTra.resx">
+      <DependentUpon>FormDanhSachPhieuTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhSachPhieuMuon.resx">
+      <DependentUpon>FormDanhSachPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTimDocGia.resx">
+      <DependentUpon>FormTimDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTraCuuDocGia.resx">
+      <DependentUpon>FormTraCuuDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTimSach.resx">
+      <DependentUpon>FormTimSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTraCuuSach.resx">
+      <DependentUpon>FormTraCuuSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTraSach.resx">
+      <DependentUpon>FormTraSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSach.resx">
+      <DependentUpon>FormSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThuTienPhat.resx">
+      <DependentUpon>FormThuTienPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuyDinh.resx">
+      <DependentUpon>FormQuyDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTacGia.resx">
+      <DependentUpon>FormTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTheLoai.resx">
+      <DependentUpon>FormTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoaiDocGia.resx">
+      <DependentUpon>FormLoaiDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrangChinh.resx">
+      <DependentUpon>FormTrangChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormDocGia.resx">
+      <DependentUpon>FormDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{96171f29-0c96-4607-9597-5e43261e49da}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{da6bb80e-574d-43c0-9f94-63debb607132}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
